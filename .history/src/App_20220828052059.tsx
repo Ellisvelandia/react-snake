@@ -1,8 +1,6 @@
 import './App.css';
 
-const  canvasX =  1000
-const canvasY = 1000
-const initialSnake = []
+const  
 
 function App() {
   return (
