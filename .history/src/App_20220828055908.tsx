@@ -15,13 +15,13 @@ const scale = 50;
 const timeDelay = 100;
 
 function App() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
-	const [ snake, setSnake ] = useState(initialSnake)
-	const [ apple, setApple ] = useState(initialApple)
-	const [ direction, setDirection ] = useState([ 0, -1 ])
-	const [ delay, setDelay ] = useState<number | null>(null)
-	const [ gameOver, setGameOver ] = useState(false)
-	const [ score, setScore ] = useState(0)
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [snake, setSnake] = useState(initialSnake);
+  const [apple, setApple] = useState(initialApple);
+  const [direction, setDirection] = useState([0, -1]);
+  const [delay, setDelay] = useState<number | null>(null);
+  const [gameOver, setGameOver] = useState(false);
+  const [score, setScore] = useState(0);
 
   useInterval(() => runGame(), delay);
 
@@ -96,7 +96,7 @@ function App() {
 
   function changeDirection(e: React.KeyboardEvent<HTMLDivElement>) {
     switch (e.key) {
-      case "ArrowLeft":
+      case "Arrowleft":
         setDirection([-1, 0]);
         break;
       case "ArrowUp":
@@ -112,9 +112,9 @@ function App() {
   }
 
   return (
-      <div onKeyDown={(e) => changeDirection(e)}>
+    <div onKeyDown={(e) => changeDirection(e)}>
       <img id="fruit" src={AppleLogo} alt="fruit" width="30" />
-      <img src={Monitor} alt="fruit" width="4000" className="monitor" />
+      <img src={Monitor} alt="monitor" width="4000" className="monitor" />
       <canvas
         className="playArea"
         ref={canvasRef}

@@ -15,13 +15,13 @@ const scale = 50;
 const timeDelay = 100;
 
 function App() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
-	const [ snake, setSnake ] = useState(initialSnake)
-	const [ apple, setApple ] = useState(initialApple)
-	const [ direction, setDirection ] = useState([ 0, -1 ])
-	const [ delay, setDelay ] = useState<number | null>(null)
-	const [ gameOver, setGameOver ] = useState(false)
-	const [ score, setScore ] = useState(0)
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [snake, setSnake] = useState(initialSnake);
+  const [apple, setApple] = useState(initialApple);
+  const [direction, setDirection] = useState([0, -1]);
+  const [delay, setDelay] = useState<number | null>(null);
+  const [gameOver, setGameOver] = useState(false);
+  const [score, setScore] = useState(0);
 
   useInterval(() => runGame(), delay);
 

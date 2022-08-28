@@ -4,15 +4,12 @@ import AppleLogo from "./applePixels.png";
 import Monitor from "./oldMonitor.png";
 import useInterval from "./useInterval";
 
-const canvasX = 1000;
-const canvasY = 1000;
-const initialSnake = [
-  [4, 10],
-  [4, 10],
-];
-const initialApple = [14, 10];
-const scale = 50;
-const timeDelay = 100;
+const canvasX = 1000
+const canvasY = 1000
+const initialSnake = [ [ 4, 10 ], [ 4, 10 ] ]
+const initialApple = [ 14, 10 ]
+const scale = 50
+const timeDelay = 100
 
 function App() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
